@@ -45,7 +45,7 @@ public class MyActivity extends AppCompatActivity {
 
     private FirebaseAnalytics mFirebaseAnalytics;
     TextView bluetoothstatus, bluetoothPaired;
-    Button enableLedButton, btndisconnect, btnshut;
+    Button blescan,enableLedButton, btndisconnect, btnshut;
     BluetoothAdapter myBluetooth;
     boolean status;
     ArrayList<String> devicesList;
@@ -71,7 +71,8 @@ public class MyActivity extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
-
+        //sean_0222
+        blescan = (Button) findViewById(R.id.buttonlightup);
         bluetoothstatus = (TextView) findViewById(R.id.bluetooth_state);
         bluetoothPaired = (TextView) findViewById(R.id.bluetooth_paired);
         enableLedButton = (Button) findViewById(R.id.buttonlightup);
@@ -96,6 +97,20 @@ public class MyActivity extends AppCompatActivity {
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         //sean client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+
+        blescan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(blsocket != null && blsocket.isConnected())
+                {
+
+                    send2Bluetooth(13, 13);
+
+                }
+            }
+        });
+
+
 
         btnshut.setOnClickListener(new View.OnClickListener() {
             @Override
