@@ -22,7 +22,7 @@ android Studio, Arduino IDE, Bluetooth HC-05 module, arduino board.
 
  android error
 C:\Users\seanlab5\.gradle\cache  지우기
-
+C:\Users\seanlab5\.android  지우기 ==> proxy setting 값이 자꾸 나옴
 
 
 Requirements:
