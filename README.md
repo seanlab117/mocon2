@@ -20,6 +20,10 @@ android Studio, Arduino IDE, Bluetooth HC-05 module, arduino board.
 <i>Actual equipment used for this project</i><br />
 <img src="http://i.imgur.com/bTCelfW.jpg" alt="entire circuit" height="200"/>
 
+ android error
+C:\Users\seanlab5\.gradle\cache  지우기
+
+
 
 Requirements:
 works on android ICE_CREAM_SANDWICH_MR1 (SDK LEVEL 15) or newer versions.
